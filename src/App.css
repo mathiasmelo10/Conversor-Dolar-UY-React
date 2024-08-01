@@ -36,3 +36,83 @@
     transform: rotate(360deg);
   }
 }
+
+h1{
+
+  text-align: center;
+  color:gold;
+
+}
+
+.centrarElementos{
+
+text-align: center;
+display: block;
+  
+}
+
+.resultado{
+
+  font-size: 40px;
+  font-weight: bold;
+  color:skyblue;
+  text-align: center;
+}
+
+body{
+
+  background-color: black;
+
+}
+
+.valorUSD{
+
+  color:gold;
+  display: block;
+  font-weight: bold;
+
+
+}
+
+.centrarBoton{
+
+  display:block;
+  margin: auto;
+  max-width: 5000px;
+  max-height:100px;
+  text-align: center;
+  
+  
+}
+
+.banderaURU{
+
+  max-width: 50px;
+  max-height:50px;
+  display:block;
+
+}
+
+input{
+
+  max-width: 60px;
+  max-height:30px;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.banderaUSA{
+
+  max-width: 10%;
+  max-height:10%;
+  padding: 10px;
+  justify-content: center;
+  justify-items: stretch;
+  display: block;
+  margin: auto;
+  text-align: center;
+  
+
+}
+
