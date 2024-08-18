@@ -41,6 +41,23 @@ function App() {
 
  
 
+ 
+ /*var ingresa = document.getElementById("ingresaValor");
+ ingresa.addEventListener("keydown", presionaConvertir);
+
+ var enterConvertir = document.getElementById("convertir");
+
+ function presionaConvertir(event) {
+  
+   if (event.key === 13) {
+    event.preventDefault();
+    enterConvertir.click(); 
+    
+   }
+ } 
+*/
+
+
   const calcular=()=>{
 
 
@@ -51,39 +68,28 @@ function App() {
     if(typeof(dolarValor) === 'number' && !isNaN(dolarValor)){
 
       const pesosUy=dolarValor*valorCambio;
-      resultadoRef.current.innerHTML=pesosUy.toFixed(2) + " $U";
-     
+      resultadoRef.current.innerHTML=pesosUy.toFixed(2) + " $UYU";
+      document.getElementById("errorText").innerHTML =
+          "USD"; 
 
     }else{
 
-      alert("Error!.Favor de ingresar valores numéricos");
+      document.getElementById("errorText").innerHTML =
+          "Error!.Favor de ingresar valores numéricos"; 
 
     }
 
   }
-
- /* document.getElementById("ingresaValor")
-    .addEventListener("onkeydown", function(event) {
-    if (event.key === 13) {
-      event.preventDefault();
-      document.getElementById("convertir").click();
- 
-    }
-}); */
- 
-
- 
- 
   return <div>
 
     <h1>Conversor DÓLAR-UY</h1>
     <div className='valorUSD centrarElementos'>
       <h2>Ingrese valor de cambio </h2><input id="ingresaValor" type='text' ref={dolarRef}></input>
+      <text id="errorText" className='errorNum'></text> 
       <img className='banderaUSA' src="/assets/usa.jpg" alt='usa'></img>
     </div>
-    <br/>
+    <img className='arrowDown' src="/assets/arrow-down1.png" alt='arrow'></img>
     <button id="convertir" className='centrarBoton'onClick={calcular}><img className='banderaURU' src="/assets/uru.jpg" alt='uru'></img>Convertir</button>
-    <br/> 
     <div className='centrarElementos resultado' ref={resultadoRef}></div>
 
   </div>
